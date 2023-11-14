@@ -23,8 +23,7 @@ const Buscador = ({colaboradores, setColaboradores,buscaColaborador,setBuscaCola
     setColaboradores(colaboradoresFiltrados)
     }
     
-    const Filtrados2 = colaboradores.filter((colaborador) => colaborador.nombre !== buscaColaborador);
-    if(Filtrados2.length > 0) { 
+   
     
     
     setAlerta({tipo:'danger', mensaje:'Colaborador no encontrado intente de nuevo'})
