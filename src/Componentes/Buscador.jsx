@@ -21,7 +21,7 @@ const Buscador = ({colaboradores, setColaboradores,buscaColaborador,setBuscaCola
 
     if(colaboradoresFiltrados.length > 0){
     setColaboradores(colaboradoresFiltrados)
-    }
+    }else{
     
    
     
