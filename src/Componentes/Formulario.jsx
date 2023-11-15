@@ -18,7 +18,7 @@ import {  Alert, Button, Form } from "react-bootstrap";
         
         
             
-        if (input.nombre === "" || input.correo === "" || input.edad === "" || input.cargo === ""  || input.telefono ===""){  
+        if (input.nombre === "" || input.correo === "" || input.edad === "" || input.cargo === ""  || input.telefono === ""){  
             setAlerta({tipo:'danger', mensaje:'Todos los campos son obligatorios'})
             return;
         }

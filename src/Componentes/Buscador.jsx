@@ -20,6 +20,7 @@ const Buscador = ({colaboradores, setColaboradores,buscaColaborador,setBuscaCola
     
           if (encontrado === false){
             setColaboradores(BaseColaboradores)
+            setAlerta({tipo:'danger', mensaje:'Colaborador no Encontrado intente nuevamente'})
             
           }
        
