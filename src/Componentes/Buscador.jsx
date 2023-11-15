@@ -4,7 +4,7 @@ import { BaseColaboradores } from "./BaseColaboradores";
 
 
 
-const Buscador = ({colaboradores, setColaboradores,buscaColaborador,setBuscaColaborador}) => {
+const Buscador = ({colaboradores, setColaboradores,buscaColaborador,setBuscaColaborador,setAlerta}) => {
 
     
     
@@ -16,10 +16,16 @@ const Buscador = ({colaboradores, setColaboradores,buscaColaborador,setBuscaCola
             setColaboradores(BaseColaboradores);
             return;
           }
-      
-   
+    const encontrado = colaboradores.some((colaborador) => colaborador.nombre === buscaColaborador);  
+    
+          if (encontrado === false){
+            setColaboradores(BaseColaboradores)
+            
+          }
        
     const colaboradoresFiltrados= colaboradores.filter((colaborador) => colaborador.nombre === buscaColaborador );
+    
+
     
 
     if(colaboradoresFiltrados.length > 0){
@@ -27,10 +33,7 @@ const Buscador = ({colaboradores, setColaboradores,buscaColaborador,setBuscaCola
     return
     }
     
-    else{
-    setColaboradores(original)
-      
-    }
+  
 }
     const renderTabla =() => {
         
