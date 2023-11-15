@@ -1,10 +1,13 @@
 
-import { Alert,Form, Button, Table } from "react-bootstrap"
+import { Form, Button, Table } from "react-bootstrap"
 import { BaseColaboradores } from "./BaseColaboradores";
 
 
-const Buscador = ({colaboradores, setColaboradores,buscaColaborador,setBuscaColaborador,setAlerta}) => {
-   
+
+const Buscador = ({colaboradores, setColaboradores,buscaColaborador,setBuscaColaborador}) => {
+
+    
+    
      
     const handlerBuscar=(e) => {
         e.preventDefault();
@@ -21,13 +24,11 @@ const Buscador = ({colaboradores, setColaboradores,buscaColaborador,setBuscaCola
 
     if(colaboradoresFiltrados.length > 0){
     setColaboradores(colaboradoresFiltrados)
-    }else{
+    return
+    }
     
-   
-    
-    
-    setAlerta({tipo:'danger', mensaje:'Colaborador no encontrado intente de nuevo'})
-    setColaboradores(BaseColaboradores)
+    else{
+    setColaboradores(original)
       
     }
 }
